@@ -1,25 +1,17 @@
 <?php
 session_start();
 include("https.php");
-
 ?><!DOCTYPE html>
 <html lang="en">
   <head>
 
-    <title>Capes Login</title>
+    <title>Yggdrasil Login</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.min.css<?="?v=".date ("ymdHis", filemtime('bootstrap.min.css'));?>" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="signin.css<?="?v=".date ("ymdHis", filemtime('signin.css'));?>" rel="stylesheet">
-    
-    <!-- 
-    <?php
-    echo "raw: ";
-    print_r($_SESSION['raw']);
-    ?>    
-    -->
   </head>
 
   <body style="padding:10em 0 9em 0!important">
@@ -38,11 +30,6 @@ include("https.php");
         <input type="text" name="email" id="username" class="form-control <?php if(isset($_SESSION['error'])) echo 'is-invalid';?>" placeholder="Email address" autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" name="pass" id="inputPassword" class="form-control <?php if(isset($_SESSION['error'])) echo 'is-invalid';?>" placeholder="Password">
-        <span style="font-size: 12px;">(or token from our mod)</span>
-        <label for="inputToken1" class="sr-only">Token1</label>
-        <input type="text" name="token1" id="inputToken1" class="form-control <?php if(isset($_SESSION['error'])) echo 'is-invalid';?>" placeholder="Token (AccessToken:ClientToken)" <?php if(isset($_GET['token'])) echo 'value="'.$_GET['token'].'"' ?>>
-        <!--<label for="inputToken2" class="sr-only">Token2</label>
-        <input type="text" name="token2" id="inputToken2" class="form-control <?php if(isset($_SESSION['error'])) echo 'is-invalid';?>" placeholder="Token">-->
         <?php
         if(isset($_SESSION['error'])) {
         ?>
@@ -56,6 +43,6 @@ include("https.php");
         <a href="https://account.mojang.com/password" style="font-size: 12px;">Forgot Password?</a>
       </form>
       <div id="yggdrasil">Powered by <a href="http://wiki.vg/Authentication">Yggdrasil Authentication</a></div>
-    </div> <!-- /container -->
+    </div>
   </body>
 </html>
