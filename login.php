@@ -18,7 +18,7 @@ include("https.php");
 
       <div class="container">
       <center>
-      <img src="https://wynndata.tk/assets/images/items/ids/313.png" style="    width: 64px;height: 64px;    max-width: 90%;    image-rendering: pixelated;"/> <!-- LOGO FOR THE MOD -->
+      <img src="https://wynndata.tk/assets/images/items/ids/313.png" style="    width: 64px;height: 64px;    max-width: 90%;    image-rendering: pixelated;"/> <!-- LOGO -->
       </center>
     <form action="post.php" method="post" class="form-signin">
         <div class="form-signin-heading">
